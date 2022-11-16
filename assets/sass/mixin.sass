@@ -1,0 +1,38 @@
+@mixin newFont($family, $pathName)
+  @font-face
+    font-family: "#{$family}"
+    src: url("~/assets/fonts/#{$pathName}.woff2") format("woff2")
+    // src: url("~/assets/fonts/#{$pathName}.woff2") format("woff2"), url("~/assets/fonts/#{$pathName}.woff") format("woff")
+    font-weight: normal
+    font-style: normal
+
+@include newFont("regular", "montserrat-400")
+@include newFont("medium","montserrat-500")
+@include newFont("semi", "montserrat-600")
+@include newFont("bold", "montserrat-700")
+@include newFont("extra", "montserrat-800")
+@include newFont("black", "montserrat-900")
+
+@include newFont("regular_p", "proximanova-400")
+@include newFont("semi_p", "proximanova-600")
+@include newFont("bold_p", "proximanova-700")
+@include newFont("extra_p", "proximanova-800")
+
+@include newFont("comicSans", "comic")
+@include newFont("georgia", "georgia")
+@include newFont("helvetica", "helvetica")
+@include newFont("timeNewRoman", "times")
+@include newFont("verdana", "verdana")
+
+// FONTS
+$regular: 'regular', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$medium: 'medium', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$semi: 'semi', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$bold: 'bold', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$extra: 'extra', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$black: 'black', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$regular_p: 'regular_p', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$semi_p: 'semi_p', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$bold_p: 'bold_p', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+$extra_p: 'extra_p', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif'
+

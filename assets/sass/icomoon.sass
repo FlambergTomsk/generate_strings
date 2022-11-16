@@ -1,0 +1,560 @@
+@import vars
+
+@font-face
+  font-family: 'icomoon'
+  src: url(~assets/fonts/icomoon/icomoon.eot)
+  src: url(~assets/fonts/icomoon/icomoon.eot) format('embedded-opentype')
+  src: url(~assets/fonts/icomoon/icomoon.ttf) format('truetype')
+  src: url(~assets/fonts/icomoon/icomoon.woff) format('woff')
+  src: url(~assets/fonts/icomoon/icomoon.svg) format('svg')
+  font-weight: normal
+  font-style: normal
+  font-display: block
+
+[class^="icon-"], [class*=" icon-"]
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important
+  speak: never
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.icon-clone:before
+  content: "\e951"
+  color: #cecece
+
+.icon-pausePart:before
+  content: "\e950"
+  color: #fff
+
+.icon-dishmenu:before
+  content: "\e94f"
+  color: #515151
+
+.icon-playTriangle:before
+  content: "\e94f"
+  color: #fff
+
+.icon-win:before
+  content: "\e945"
+
+.icon-mac:before
+  content: "\e946"
+
+.icon-iphone:before
+  content: "\e94a"
+
+.icon-ipad:before
+  content: "\e94d"
+
+.icon-android:before
+  content: "\e94e"
+
+.icon-qr:before
+  content: "\e943"
+  color: #b7b7b7
+
+.icon-drag:before
+  content: "\e93e"
+  color: #b7b7b7
+
+.icon-gear-ether:before
+  content: "\e93a"
+
+.icon-notebook:before
+  content: "\e93b"
+
+.icon-gear-mid:before
+  content: "\e956"
+
+.icon-gear-down:before
+  content: "\e954"
+
+.icon-gear-right:before
+  content: "\e955"
+
+.icon-eye-open:before
+  content: "\e939"
+
+.icon-gear:before
+  content: "\e938"
+  color: $prim
+
+.icon-big-dislike:before
+  content: "\e937"
+
+.icon-repeat-one:before
+  content: "\e933"
+  color: #ff6800
+
+.icon-checkbox
+  transition: 0.3s
+  .path1:before
+    transition: 0.3s
+    content: "\e901"
+    color: rgb(255, 255, 255)
+
+.icon-checkbox
+  transition: 0.3s
+  .path2:before
+    transition: 0.3s
+    content: "\e902"
+    margin-left: -1em
+    color: rgb(206, 206, 206)
+
+.icon-checkbox
+  transition: 0.3s
+  .path3:before
+    transition: 0.3s
+    content: "\e903"
+    margin-left: -1em
+    color: rgb(222, 222, 222)
+
+.icon-checkbox_active .path1:before
+  content: "\e901"
+  color: #FF6800
+
+.icon-checkbox_active .path2:before
+  content: "\e902"
+  margin-left: -1em
+  color: #FFFFFF
+
+.icon-checkbox_active .path3:before
+  content: "\e903"
+  margin-left: -1em
+  color: #FF6800
+
+.icon-checkbox:hover
+  transition: 0.3s
+  transform: scale(1.1)
+  .path1:before
+    color: #FFF5EB
+  .path2:before
+    color: #FF6800
+  .path3:before
+    color: #FF6800
+
+.icon-checkbox_active:hover
+  transition: 0.3s
+  transform: scale(1.1)
+  .path1:before
+    color: #FF6800
+    transition: 0.3s
+  .path2:before
+    color: #FFFFFF
+    transition: 0.3s
+  .path3:before
+    color: #FF6800
+    transition: 0.3s
+
+.notification:hover
+  .icon-checkbox
+    transition: 0.3s
+    transform: scale(1.1)
+    .path1:before
+      color: #FFF5EB
+    .path2:before
+      color: #FF6800
+    .path3:before
+      color: #FF6800
+
+.notification:hover
+  .icon-checkbox_active
+    .path1:before
+      color: #FF6800
+      transition: 0.3s
+    .path2:before
+      color: #FFFFFF
+      transition: 0.3s
+    .path3:before
+      color: #FF6800
+      transition: 0.3s
+
+.icon-arrow:before
+  content: "\e906"
+
+.icon-down:before
+  content: "\e905"
+  color: #ff6800
+
+.icon-eye:before
+  content: "\e906"
+
+.icon-eye-closed:before
+  content: "\e907"
+
+.icon-plus:before
+  content: "\e909"
+
+.icon-roundCheckbox .path1:before
+  content: "\e90a"
+  color: rgb(255, 255, 255)
+
+.icon-roundCheckbox .path2:before
+  content: "\e90e"
+  margin-left: -1em
+  color: rgb(245, 245, 245)
+
+.icon-roundCheckbox .path3:before
+  content: "\e917"
+  margin-left: -1em
+  color: rgb(222, 222, 222)
+
+.icon-roundCheckbox_active .path1:before
+  content: "\e90a"
+  color: #FF6800
+
+.icon-roundCheckbox_active .path2:before
+  content: "\e90e"
+  margin-left: -1em
+  color: #F5F5F5
+
+.icon-roundCheckbox_active .path3:before
+  content: "\e917"
+  margin-left: -1em
+  color: #FF6800
+
+.icon-roundCheckbox:hover
+  .path1:before
+    color: #FFF5EB
+  .path2:before
+    color: #FF6800
+  .path3:before
+    color: #FF6800
+
+.icon-roundClose .path1:before
+  content: "\e919"
+  color: rgb(255, 255, 255)
+
+.icon-roundClose .path2:before
+  content: "\e91a"
+  margin-left: -1em
+  color: rgb(255, 65, 65)
+
+.icon-roundClose .path3:before
+  content: "\e91b"
+  margin-left: -1em
+  color: rgb(255, 65, 65)
+
+.icon-roundNext .path1:before
+  content: "\e91c"
+  color: rgb(16, 17, 23)
+
+.icon-roundNext .path2:before
+  content: "\e91d"
+  margin-left: -1em
+  color: rgb(255, 255, 255)
+
+.icon-roundPause .path1:before
+  content: "\e91e"
+  color: rgb(16, 17, 23)
+
+.icon-roundPause .path2:before
+  content: "\e91f"
+  margin-left: -1em
+  color: rgb(255, 255, 255)
+
+.icon-roundPause .path3:before
+  content: "\e920"
+  margin-left: -1em
+  color: rgb(255, 255, 255)
+
+.icon-roundPlay .path1:before
+  content: "\e925"
+  color: rgb(16, 17, 23)
+
+.icon-roundPlay .path2:before
+  content: "\e92d"
+  margin-left: -1em
+  color: rgb(255, 255, 255)
+
+.icon-play-triangle .path1:before
+  content: "\e925"
+  color: transparent
+
+.icon-play-triangle .path2:before
+  content: "\e92d"
+  margin-left: -1em
+  color: $dark
+
+.icon-roundPlus .path1:before
+  transition: 0.3s
+  content: "\e92f"
+  color: rgb(255, 255, 255)
+
+.icon-roundPlus .path2:before
+  transition: 0.3s
+  content: "\e931"
+  margin-left: -1em
+  color: rgb(255, 104, 0)
+
+.icon-roundPlus .path3:before
+  transition: 0.3s
+  content: "\e932"
+  margin-left: -1em
+  color: rgb(222, 222, 222)
+
+.icon-roundPlus:hover
+  transition: 0.3s
+  .path1:before
+    color: $prim
+  .path2:before
+    color: $white
+  .path3:before
+    color: $prim
+
+.icon-big-expand-reverse:before
+  content: "\e935"
+  color: $white
+
+.icon-add:before
+  content: "\e900"
+
+.icon-audio:before
+  content: "\e904"
+  color: #515151
+
+.icon-big-expand:before
+  content: "\e90b"
+  color: $white
+
+.icon-big-expand-hover .path1:before
+  content: "\e90c"
+  color: rgb(255, 255, 255)
+  opacity: 0.2
+
+.icon-big-expand-hover .path2:before
+  content: "\e90d"
+  margin-left: -1em
+  color: rgb(255, 255, 255)
+
+.icon-big-like:before
+  content: "\e90f"
+
+.icon-big-next:before
+  content: "\e910"
+
+.icon-big-points:before
+  content: "\e911"
+  color: #515151
+
+.icon-big-rand:before
+  content: "\e912"
+  color: #515151
+
+.icon-big-repeat:before
+  content: "\e913"
+  color: #515151
+
+.icon-big-repeat.orange:before
+  color: #ff6800
+
+.icon-big-volume-loud:before
+  content: "\e914"
+  color: #515151
+
+.icon-big-volume-medium:before
+  content: "\e915"
+  color: #515151
+
+.icon-big-volume-none:before
+  content: "\e916"
+  color: #515151
+
+.icon-book:before
+  content: "\e918"
+  color: #515151
+
+.icon-clock:before
+  content: "\e921"
+  color: #515151
+
+.icon-close:before
+  content: "\e922"
+  color: #515151
+
+.icon-contract:before
+  content: "\e923"
+  color: #515151
+
+.icon-copy:before
+  content: "\e924"
+  color: #515151
+
+.icon-default-avatar .path1:before
+  content: "\e926"
+  color: rgb(245, 245, 245)
+
+.icon-default-avatar .path2:before
+  content: "\e927"
+  margin-left: -1em
+  color: rgb(206, 206, 206)
+
+.icon-default-avatar .path3:before
+  content: "\e928"
+  margin-left: -1em
+  color: rgb(206, 206, 206)
+
+.icon-default-avatar .path4:before
+  content: "\e929"
+  margin-left: -1em
+  color: rgb(206, 206, 206)
+
+.icon-diagram:before
+  content: "\e92a"
+  color: #ff6800
+
+.icon-discs:before
+  content: "\e92b"
+  color: #515151
+
+.icon-dislike:before
+  content: "\e92c"
+  color: #515151
+
+.icon-edit:before
+  content: "\e92e"
+  color: #515151
+
+.icon-exit:before
+  content: "\e930"
+  color: #515151
+
+.icon-gift:before
+  content: "\e934"
+  color: #515151
+
+.icon-info:before
+  content: "\e936"
+  color: #9e9e9e
+
+.icon-like:before
+  content: "\e93c"
+  color: #515151
+
+.icon-message:before
+  content: "\e93d"
+  color: #515151
+
+.icon-more:before
+  content: "\e93f"
+  color: #fff
+
+.icon-picture:before
+  content: "\e940"
+  color: #515151
+
+.icon-play:before
+  content: "\e941"
+  color: #515151
+
+.icon-points:before
+  content: "\e942"
+  color: #515151
+
+.icon-radio:before
+  content: "\e944"
+  color: #515151
+
+.icon-search:before
+  content: "\e947"
+  color: #9e9e9e
+
+.icon-share:before
+  content: "\e948"
+
+.icon-small-close:before
+  content: "\e949"
+  color: #fff
+
+.icon-speaker:before
+  content: "\e94b"
+  color: #515151
+
+.icon-star:before
+  content: "\e94c"
+  color: #515151
+
+.icon-timetable:before
+  content: "\e959"
+  color: #515151
+
+.icon-up-down:before
+  content: "\e95b"
+  color: #515151
+
+.icon-user:before
+  content: "\e95c"
+  color: #515151
+
+.icon-video:before
+  content: "\e95d"
+  color: #515151
+
+@keyframes pulse
+  50%
+    transform: scale(1.5,1.5)
+    opacity: 0
+    background: $prim
+  99%
+    transform: scale(.001,.001)
+    opacity: 0
+    background: $prim
+  100%
+    transform: scale(.001,.001)
+    opacity: 1
+    background: $prim
+
+span.icon-big-like, .icon-big-dislike
+  position: relative
+  &::after
+    content: ''
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: absolute
+    display: block
+    border-radius: 50%
+
+@keyframes rotateGear
+  0%
+    transform: rotate(0deg)
+  6.25% 
+    transform: rotate(22.5deg)
+  12.5% 
+    transform: rotate(45deg)
+  18.75% 
+    transform: rotate(67.5deg)
+  25%
+    transform: rotate(90deg)
+  31.25%
+    transform: rotate(112.5deg)
+  37.5% 
+    transform: rotate(135deg)
+  43.75%
+    transform: rotate(157.5deg)
+  50%
+    transform: rotate(180deg)
+  56.25%
+    transform: rotate(202.5deg)
+  62.5%
+    transform: rotate(225deg)
+  68.75% 
+    transform: rotate(247.5deg)
+  75%
+    transform: rotate(270deg)
+  81.25%
+    transform: rotate(292.5deg)
+  87.5%
+    transform: rotate(315deg)
+  93.75%
+    transform: rotate(337.5deg)
+  100%
+    transform: rotate(360deg)

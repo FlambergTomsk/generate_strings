@@ -1,0 +1,136 @@
+@import mixin
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+
+a
+  text-decoration: none
+
+body
+  font-family: $regular_p
+  min-width: 320px
+  position: relative
+  line-height: 150%
+  font-size: 16px
+  overflow-x: hidden
+  color: $dark
+  background: $hover
+  scroll-behavior: smooth
+  text-rendering: optimizeSpeed
+
+
+.wrapper
+  max-width: 1276px
+  margin: 0 auto
+  background-color: $lightGrey
+  min-height: 100vh
+
+  &__inner
+    display: flex
+
+    &_height
+      margin-bottom: 120px
+
+  &__content
+    flex: 1
+    padding-left: 304px
+    display: flex
+    flex-direction: column
+    transition:  padding-left 0.3s
+
+
+.wrapper__inner_height .sidebar
+  height: calc( 100% - 120px )
+
+.hover
+  cursor: pointer
+  transition: 0.3s
+  &:hover
+    transform: translateY(-2px)
+
+.page
+  padding: 24px 40px
+  flex: 1
+  overflow-y: auto
+  background: $white
+  &__loadMore
+    text-align: center
+    margin: 24px 0
+    span
+      background: #FF6800
+      border-radius: 66px
+      padding: 10px 24px
+      color: white
+      cursor: pointer
+      display: inline-block
+  &__search
+    &::before
+      position: absolute
+      top: -24px
+      left: -24px
+      background-color: $lightGrey
+      content: ''
+      width: calc(100% + 48px)
+      height: calc(100% + 48px)
+      z-index: -1
+  &__wrapper
+    border-radius: 16px
+    border: 1px solid $border
+  &::-webkit-scrollbar
+    width: 4px
+    border-radius: 4px
+  &::-webkit-scrollbar-thumb
+    background-color: $disabled
+    border-radius: 4px
+  &__content
+    padding: 24px 0 0
+    margin-bottom: 24px
+
+
+.content
+  min-height: 194px
+  position: relative
+  &__notfound
+    width: 413px
+    position: absolute
+    top: 50%
+    left: 50%
+    font-size: 14px
+    text-align: center
+    line-height: 150%
+    transform: translate(-50%, -50%)
+    margin: auto auto
+    padding: 8px 16px 10px
+    border-radius: 16px
+    background-color: $bg
+  &__row
+    margin-bottom: 16px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 24px
+  &__title
+    font-size: 20px
+    line-height: 150%
+    font-family: $semi
+  &__all
+    display: flex
+    align-items: center
+    padding: 4px 12px 2px 0
+    cursor: pointer
+    color: $dark
+    &:hover
+      .content
+        &__icon
+          transform: translateX(10px)
+  &__icon
+    width: 6px
+    height: 11px
+    margin-left: 12px
+    transition: 0.3s
+    path
+      stroke: $dark
+
+      
