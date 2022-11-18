@@ -5,9 +5,15 @@
     <input
       :value="value"
       class="search__input"
+      :class="{'search__input_err': isError}"
       :placeholder="placeholder"
       @input="$emit('input', $event.target.value)"
     >
+    <div
+    v-if="isError"
+    class="search__err">
+      Введите не менее 2х символов
+    </div>
     <div
       v-if="value!==''"
       class="search__clear icon-close"
@@ -31,6 +37,10 @@ export default {
     value: {
       type: String,
       default: '',
+    },
+    isError: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {

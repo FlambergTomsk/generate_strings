@@ -2,16 +2,18 @@
   <div class="page"
   :class="{'page_loading': isLoading}"
   >
-    <!-- <div
+    <div
      v-if="PERCENTS === 99"
      class="page__content">
         <div class="page__container">
           <search
+          :placeholder = "'Введите не менее двух символов'"
+          :isError="isError"
           v-model="searchField"
           v-debounce:500="changeSearch"
           @clear = "kostbIL"
           />
-          <div class="page__result result" v-if="searchField && !isLoading" :key="searchKey">
+          <div class="page__result result" v-if="searchField.length>1 && !isLoading" :key="searchKey">
            <div class="result__block result__block_sticky "><span class="result__text">Найдено строк:</span>  {{RESULT_COUNT}}</div>
            <br/>
            <div  v-if="RESULT_ARRAY.length>0" class="result__block" ><span class="result__text "> Найденные строки:</span> </div>
@@ -23,7 +25,7 @@
           </div>
          <transition name="cards" mode="out-in">
           <div
-          v-if="!isLoading && !searchField"
+          v-if="!isLoading && searchField.length<2"
           class="content__field">
           <h2 class="content__title">Используемые технологии</h2>
            <div class="content__blocks">
@@ -64,8 +66,10 @@
           
          </div>
          </transition>
-    </div> -->
-    <div class="page__loader loader">
+    </div>
+    <div
+     v-if="PERCENTS !== 99"
+     class="page__loader loader">
       <div class="loader__wrapper">
         <div class="loader__title">
           Задание
@@ -135,11 +139,13 @@ export default {
   },
   computed: {
     ...mapGetters('strings',['RESULT_COUNT', 'RESULT_ARRAY', 'PERCENTS']),
+    isError(){
+      return this.searchField.length === 1 ? true : false;
+    },
   },
   watch: {
     'searchField': function () {
-      this.isLoading = true;
-      
+      if(this.searchField.length>1) {this.isLoading = true};
     },
   },
   mounted(){
@@ -152,9 +158,11 @@ export default {
       setTimeout(this.changeSearch, 500)
     },
     changeSearch(){
+      if (this.searchField.length>1){
       this.SET_SEARCH_VALUE(this.searchField); 
       this.isLoading = false;
       this.searchKey +=1;
+      }
     },
   }
 }

@@ -1,8 +1,25 @@
 .search
-  position: sticky
+  position: relative
   top: 0
   z-index: 1
   margin-bottom: 24px
+
+
+  &__err
+    color: $red
+    min-height: 23px
+    position: absolute
+    padding: 3px
+    left: 28px
+    // top: 20px
+    transform: translateY(-210%)
+    background-color: $lightGrey
+    border-radius: 16px
+    font-size: 12px
+    transition: 0.3s
+    z-index: 20000
+    .searh__input
+      border: 1px solid $red
 
   &__input
     width: 100%
@@ -35,6 +52,8 @@
         border: 1px solid $border
         &::placeholder
           color: $grey
+    &_err
+      border: 1px solid $red
 
 
 
